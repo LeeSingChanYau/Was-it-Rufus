@@ -1,0 +1,19 @@
+{
+  "name": "was-it-rufus",
+  "version": "1.0.0",
+  "description": "A program that prints specific facts about a local git repository.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LeeSingChanYau/Was-it-Rufus.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LeeSingChanYau/Was-it-Rufus/issues"
+  },
+  "homepage": "https://github.com/LeeSingChanYau/Was-it-Rufus#readme"
+}
