@@ -28,10 +28,8 @@ exec('git log -1 --format=%ct', { cwd: git_dir}, (err, stdout, stderr) => {
     }
     
     const today = new Date();
-    console.log(today)
     const oneWeekAgo = new Date(today.setDate(today.getDate() - 7));
     const lastCommitDate = new Date(stdout * 1000);
-    console.log(oneWeekAgo, lastCommitDate);
     
     if (lastCommitDate > oneWeekAgo) {
         console.log("recent commit: True");
@@ -45,7 +43,7 @@ exec(`git log -1 --pretty=format:'%an'`, { cwd: git_dir}, (err, stdout, stderr) 
         console.log(err);
     }
     
-    if(stdout==="Rufus") {
+    if(stdout.toLowerCase()==="rufus") {
         console.log("blame Rufus: True");
     } else {
         console.log("blame Rufus: False");
