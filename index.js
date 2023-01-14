@@ -17,8 +17,10 @@ exec('git diff HEAD', { cwd: git_dir}, (err, stdout, stderr) => {
     if (err) {
         console.log(err);
     }
-
-    if (typeof stdout === 'string') {
-        console.log("changes:", stdout);
+    console.log(stdout);
+    if (stdout === '') {
+        console.log("local changes: False");
+    } else {
+        console.log("local changes: True");
     }
 })
