@@ -27,9 +27,11 @@ exec('git log -1 --format=%ct', { cwd: git_dir}, (err, stdout, stderr) => {
         console.log(err);
     }
     
-    const date = new Date(stdout * 1000);
-    const oneWeekAgo = new Date(date.setDate(date.getDate() - 7));
+    const today = new Date();
+    console.log(today)
+    const oneWeekAgo = new Date(today.setDate(today.getDate() - 7));
     const lastCommitDate = new Date(stdout * 1000);
+    console.log(oneWeekAgo, lastCommitDate);
     
     if (lastCommitDate > oneWeekAgo) {
         console.log("recent commit: True");
